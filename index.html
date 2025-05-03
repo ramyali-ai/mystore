@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>خدمات صيانة لابتوب</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f7fa;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(to left, #007bff, #0056b3);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    nav {
+      background-color: #004080;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 1rem;
+      gap: 10px;
+    }
+
+    nav a {
+      color: white;
+      background-color: #007bff;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #0056b3;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      margin: 1rem auto;
+      max-width: 900px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: #007bff;
+    }
+
+    .item-button {
+      display: block;
+      width: 100%;
+      text-align: right;
+      margin: 0.5rem 0;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      background-color: #f0f4ff;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .item-button:hover {
+      background-color: #e0ebff;
+    }
+
+    #copied-msg {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #28a745;
+      color: white;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      display: none;
+      z-index: 999;
+      font-size: 0.95rem;
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #007bff;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+
+      .item-button {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>مركز صيانة اللابتوب</h1>
+  <p>خدمات تقنية | تحديثات | اكسسوارات | دعم سريع</p>
+  <p style="background-color: #ffc107; color: #222; padding: 0.75rem 1rem; border-radius: 8px; font-weight: bold; margin-top: 1rem;">
+    📌 الرجاء الضغط على الخدمة أو المنتج المطلوب ليتم نسخه، ثم إرسال النص عبر واتساب للتواصل بأقرب وقت ممكن.
+  </p>
+</header>
+
+
+  <nav>
+    <a href="#services">الخدمات</a>
+    <a href="#accessories">الإكسسوارات</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+
+  <section id="services">
+    <h2>الخدمات</h2>
+    <button class="item-button" onclick="copyText('تنزيل برامج Microsoft Office')">📥 تنزيل برامج Microsoft Office</button>
+    <button class="item-button" onclick="copyText('تنزيل AutoCAD و3D Max مفعلين')">📐 تنزيل AutoCAD و3D Max مفعلين</button>
+    <button class="item-button" onclick="copyText('تنزيل برامج محاسبة حسب الطلب')">🧾 تنزيل برامج محاسبة حسب الطلب</button>
+    <button class="item-button" onclick="copyText('فورمات وتنزيل Windows 7 / 10 / 11 مفعل')">🧹 فورمات احترافي وتنزيل Windows مفعل</button>
+    <button class="item-button" onclick="copyText('تسريع الجهاز عبر ترقية إلى SSD أو M.2')">🚀 ترقية إلى SSD أو M.2</button>
+    <button class="item-button" onclick="copyText('تبديل شاشة أو تصليح مدخل الشاحن')">💻 تبديل شاشة أو تصليح مدخل الشاحن</button>
+  </section>
+
+  <section id="accessories">
+    <h2>الإكسسوارات</h2>
+    <button class="item-button" onclick="copyText('ماوس سلكي ولاسلكي')">🖱️ ماوس سلكي ولاسلكي</button>
+    <button class="item-button" onclick="copyText('سماعات سلكية ولاسلكية')">🎧 سماعات سلكية ولاسلكية</button>
+    <button class="item-button" onclick="copyText('وصلات HDMI، USB، Type-C')">🔌 وصلات HDMI، USB، Type-C</button>
+  </section>
+
+  <section id="contact">
+    <h2>تواصل معنا</h2>
+    <p>📞 0799318512</p>
+    <p>📍 الموقع: (أضف مدينتك)</p>
+  </section>
+
+  <footer>
+    &copy; 2025 جميع الحقوق محفوظة | مركز صيانة لابتوب
+  </footer>
+
+  <!-- رسالة تم النسخ -->
+  <div id="copied-msg">✅ تم النسخ إلى الحافظة</div>
+
+  <!-- زر واتساب -->
+  <a class="whatsapp" href="https://wa.me/962799318512" target="_blank" title="تواصل عبر واتساب">
+    💬
+  </a>
+
+  <script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        const msg = document.getElementById("copied-msg");
+        msg.style.display = "block";
+        setTimeout(() => {
+          msg.style.display = "none";
+        }, 2000);
+      });
+    }
+  </script>
+
+</body>
+</html>
